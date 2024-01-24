@@ -13,6 +13,7 @@ def get_text() :
     print(plain_text)
     enc_text=rsa.encrypt(plain_text,public_key)
     filename="commonfile.txt"
+    #function to the cipher text in a file
     with open(filename, 'w') as file:
          for char in enc_text:
             file.write(str(char) + '\n')
@@ -25,6 +26,7 @@ def open_user2_window():
     newwindow.geometry('550x400')
     # Open the file
     file_path = 'commonfile.txt'
+    #reading from the file
     with open(file_path, 'r') as file:
         numbers=[int(line.strip()) for line in file]
 
